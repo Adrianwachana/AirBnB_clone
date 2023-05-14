@@ -2,6 +2,7 @@
 
 import cmd
 
+
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
 
@@ -27,6 +28,6 @@ class HBNBCommand(cmd.Cmd):
         print("EOF command to exit the program.")
         print()
 
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
-
