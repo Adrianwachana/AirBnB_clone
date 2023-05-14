@@ -1,4 +1,7 @@
+#!/usr/bin/python3
+
 import json
+
 
 class FileStorage:
     __file_path = "file.json"
@@ -24,7 +27,7 @@ class FileStorage:
                 serialized_objects = json.load(file)
                 for key, value in serialized_objects.items():
                     class_name, obj_id = key.split(".")
-                    module = __import__("models.{}".format(class_name), fromist=[class_name])
+                    module = __import__(f"models.{class_name}", fromlist=[class_name])
                     cls = getattr(module, class_name)
                     self.__objects[key] = cls(**value)
         except FileNotFoundError:
