@@ -19,11 +19,13 @@ class HBNBCommand(cmd.Cmd):
 
     def help_quit(self):
         """Display help message for quit command"""
-        print("Exit the program.")
+        print("Quit command to exit the program.")
+        print()
 
     def help_EOF(self):
         """Display help message for EOF command"""
-        print("Exit the program.")
+        print("EOF command to exit the program.")
+        print()
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
